@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Capstone</title>
+</head>
+<body>
+<div>
+    <h1>Medicine List</h1>
+    <ul>
+        {% for medicine in medicines %}
+            <li><a href="{% url 'cpastone:detail' medicine.code %}"> 이름: {{medicine}}</a><br>재료: {{medicine.ingredient}}</li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
